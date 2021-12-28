@@ -28,7 +28,7 @@ const style = {
 };
 
 const ProfileCard = ({ user }) => {
-  console.log(user);
+  console.log(user?.verfied);
   const [name, setName] = useState(user?.name);
   const [open, setOpen] = React.useState(false);
   const [loading, setLoading] = React.useState(false);
@@ -75,7 +75,8 @@ const ProfileCard = ({ user }) => {
               >
                 {user?.email}
                 <Chip
-                  label={user.verified ? "verified" : "Not verified"}
+                  color="success"
+                  label={user.verfied ? "verified" : "Not verified"}
                   variant="outlined"
                 />
               </Typography>

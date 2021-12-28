@@ -51,6 +51,7 @@ const Login = () => {
         onChange={(e) => setPassword(e.target.value)}
       />
       <input type="button" onClick={handleForm} value="submit" name="submit" />
+      <Link to="/signup">Need to create account</Link>
     </div>
   );
 };
